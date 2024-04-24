@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"javacore.homework01.services","l":"Comparators"},{"p":"javacore.homework01.models","l":"Notebook"},{"p":"javacore.homework01.task","l":"Price"}];updateSearchResults();

@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"javacore.homework01.models"},{"l":"javacore.homework01.services"},{"l":"javacore.homework01.task"}];updateSearchResults();
