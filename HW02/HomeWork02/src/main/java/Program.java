@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Program {
     private static final Scanner scanner = new Scanner(System.in);
     private static final Random rand = new Random();
-    private static final int WIN_COUNT = 3;
+    private static final int WIN_COUNT = 4;
     private static final char DOT_HUMAN = 'X';
     private static final char DOT_AI = 'O';
     private static final char DOT_EMPTY = '*';
@@ -36,8 +36,8 @@ public class Program {
     }
 
     static void fieldInit() {
-        fieldSizeX = 4;
-        fieldSizeY = 4;
+        fieldSizeX = 5;
+        fieldSizeY = 5;
         field = new char[fieldSizeX][fieldSizeY];
         for (int i = 0; i < fieldSizeX; i++) {
             for (int j = 0; j < fieldSizeY; j++) {
@@ -136,12 +136,9 @@ public class Program {
             return false;
         }
         int counter = 0;
-        if(y > fieldSizeY - WIN_COUNT){
-            return false;
-        }
 
-        for (int i = y; i < WIN_COUNT; i++) {
-            if (field[x][i] == dot) {
+        for (int i = 0; i < WIN_COUNT; i++) {
+            if (isCellValid(x, y + i) && field[x][y + i] == dot) {
                 counter += 1;
             }
         }
@@ -160,12 +157,9 @@ public class Program {
             return false;
         }
         int counter = 0;
-        if(x > fieldSizeX - WIN_COUNT){
-            return false;
-        }
 
-        for (int i = x; i < WIN_COUNT; i++) {
-            if (field[i][y] == dot) {
+        for (int i = 0; i < WIN_COUNT; i++) {
+            if (isCellValid(x + i, y) && field[x + i][y] == dot) {
                 counter += 1;
             }
         }
